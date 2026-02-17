@@ -1,0 +1,70 @@
+/* Use Tailwind's base styles */
+@tailwind base;
+/* Use Tailwind's component styles */
+@tailwind components;
+/* Use Tailwind's utility styles */
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Minecraft Regular';
+  src: url('/fonts/minecraft-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  @apply bg-minecraft-dark text-white;
+  background-image: url('/static/images/stone-background.jpg');
+  background-repeat: repeat;
+}
+
+/* Ensure input text is visible across the site */
+input, textarea, select {
+  color: white !important;
+  background-color: #424242 !important;
+}
+
+.minecraft-button {
+  @apply font-minecraft py-2 px-4 border-2 border-black relative text-center cursor-pointer select-none;
+  background-color: #9e9e9e;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #fff7;
+  text-shadow: 2px 2px #000a;
+}
+
+.minecraft-button:hover {
+  background-color: #bdbdbd;
+}
+
+.minecraft-button:active {
+  box-shadow: inset -2px -4px #0006;
+}
+
+.minecraft-panel {
+  @apply border-2 border-minecraft-black p-4 rounded;
+  background-color: rgba(74, 74, 74, 0.8);
+  box-shadow: inset 0 0 0 4px #ffffff33, 0 0 0 2px #000000;
+}
+
+.minecraft-input {
+  @apply bg-minecraft-dark border-2 border-minecraft-black p-2 text-white rounded;
+}
+
+.forum-post {
+  @apply minecraft-panel mb-4;
+}
+
+.forum-post-header {
+  @apply flex justify-between items-center mb-2 pb-2 border-b border-minecraft-stone;
+}
+
+.forum-post-title {
+  @apply text-xl font-minecraft text-minecraft-gold;
+}
+
+.forum-post-content {
+  @apply my-2;
+}
+
+.forum-post-footer {
+  @apply flex justify-between items-center mt-2 pt-2 border-t border-minecraft-stone text-sm;
+}
